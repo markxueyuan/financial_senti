@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: incanter/incanter-latex:1.5.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/incanter/incanter-latex/1.5.7/incanter-latex-1.5.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
