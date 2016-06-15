@@ -34,6 +34,22 @@
                    (.close in-file))))]
     (lazy csv-seq)))
 
+(defn board-to-long
+  [data]
+  (let [horizontal (doall (rest (first data)))]
+    (->>
+      (map
+        (fn [row]
+          (map
+            conj
+            (map
+              #(vector (first row) %)
+              (rest row))
+            horizontal))
+        (rest data))
+      (mapcat identity)
+      (remove #(or (= (second %) "") (nil? (second %)))))))
+
 (defn lazy-read-csv-head-on
   [file]
   (let [coll (lazy-read-csv file)
